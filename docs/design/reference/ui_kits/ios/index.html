@@ -1,0 +1,37 @@
+<!-- @dsCard group="iOS App" viewport="500x940" name="Bancomer iOS" subtitle="Income & expense ledger · glass Add action · drillable categories" -->
+<!-- @startingPoint section="Screens" subtitle="iOS ledger — home, detail, add" viewport="500x940" -->
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bancomer — iOS</title>
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<script src="../shared-data.js"></script>
+<style>body{margin:0;background:var(--surface-backdrop);display:flex;justify-content:center;padding:32px 0;font-family:var(--font-ui)}a{color:var(--text-link)}a:hover{color:var(--text-link-hover)}</style>
+</head><body><div id="root"></div>
+<script type="text/babel" src="./ios-frame.jsx"></script>
+<script type="text/babel" src="../screens.jsx"></script>
+<script type="text/babel">
+const { IOSDevice, IOSGlassPill } = window;
+const LedgerApp = window.BancomerLedgerApp;
+// Liquid Glass is chrome-only (the floating Add action); financial content stays opaque.
+const glassAdd = (open) => (
+  <div style={{position:'absolute',bottom:16,left:0,right:0,display:'flex',justifyContent:'center',zIndex:30}}>
+    <div onClick={open} style={{cursor:'pointer'}}>
+      <IOSGlassPill dark><div style={{padding:'0 20px',fontSize:14,fontWeight:600,color:'var(--bbva-ink)',fontFamily:'var(--font-ui)',display:'flex',alignItems:'center',gap:8}}><span style={{fontSize:18,lineHeight:1,marginTop:-1}}>＋</span>Add transaction</div></IOSGlassPill>
+    </div>
+  </div>
+);
+function App() {
+  return (
+    <IOSDevice dark>
+      <div style={{position:'relative',height:'100%'}}>
+        <LedgerApp height="100%" topInset={62} addAction={glassAdd} sheetGrabber />
+      </div>
+    </IOSDevice>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+</script></body></html>

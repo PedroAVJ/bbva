@@ -1,0 +1,3 @@
+# Bancomer iOS UI kit
+
+iPhone-framed income-and-expense ledger: Net-this-month hero with Income/Expenses facts, expense composition by category (drillable), recurring-vs-one-time split, recent transactions, and a full add-transaction flow (income/expense, amount, description, category, who it's for, recurring toggle; date defaults to today — no pickers). The floating "＋ Add transaction" action lives in the Liquid Glass functional layer with the sheet in standard native placement; all financial content is opaque. The SwiftUI implementation should use real Apple glass/sheet APIs — this HTML expresses placement and hierarchy. Manual, offline, on-device data model; synthetic sample data from `../shared-data.js`.

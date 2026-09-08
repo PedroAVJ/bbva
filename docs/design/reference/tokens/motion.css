@@ -1,0 +1,5 @@
+:root{
+--bbva-motion-push:340ms cubic-bezier(0.32,0.72,0.35,1); /* @kind other */ /* iOS-style push; home parallaxes back 28% */
+--bbva-motion-ease:cubic-bezier(0.32,0.72,0.35,1); /* @kind other */
+--bbva-push-shadow:-12px 0 28px rgba(0,0,0,0.5); /* incoming pane left-edge shadow */
+}

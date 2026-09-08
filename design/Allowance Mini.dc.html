@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="./support.js"></script>
+  </head>
+  <body>
+    <x-dc>
+      <helmet data-dc-atomics>
+        <link rel="preconnect" href="https://fonts.googleapis.com"></link>
+        <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" rel="stylesheet"></link>
+        <style>
+          :root{--bbva-navy:#051730;--bbva-bg:#0E1E33;--bbva-bg-deep:#0A1526;--bbva-line:#20395B;--bbva-ink:#E8EEF5;--bbva-ink-dim:#9FB3C8;--bbva-ink-faint:#66809B;--bbva-coral:#F07285;--bbva-teal:#35B392;--seg1:#3A6EA8;--seg2:#4E8FD0;--seg3:#6FAEE3;--seg4:#9CCAF0;--seg5:#C7E1F8;}
+          body{margin:0;background:var(--bbva-bg-deep);font-family:'Libre Franklin',-apple-system,sans-serif;}
+          a{color:#6FAEE3;text-decoration:none;}
+          a:hover{color:#9CCAF0;}
+          .win{width:420px;margin:24px auto;border-radius:12px;overflow:hidden;box-shadow:0 18px 50px rgba(0,0,0,0.55),0 2px 8px rgba(0,0,0,0.4);background:var(--bbva-bg);}
+          .titlebar{background:var(--bbva-navy);height:38px;display:flex;align-items:center;padding:0 14px;gap:8px;position:relative;z-index:3;}
+          .dot{width:12px;height:12px;border-radius:6px;}
+          .white{color:#FFFFFF;}
+          .navy{color:var(--bbva-ink);}
+          .dim{color:var(--bbva-ink-dim);}
+          .faint{color:var(--bbva-ink-faint);}
+          .teal{color:var(--bbva-teal);}
+          .coral{color:var(--bbva-coral);}
+          .mono{font-variant-numeric:tabular-nums;letter-spacing:-0.01em;}
+          .viewport{position:relative;height:560px;overflow:hidden;background:var(--bbva-bg);}
+          .pane{position:absolute;inset:0;overflow-y:auto;overflow-x:hidden;background:var(--bbva-bg);}
+          .pdetail{box-shadow:-12px 0 28px rgba(0,0,0,0.5);z-index:2;}
+          .phome{z-index:1;}
+          @media (prefers-reduced-motion: no-preference){.pane{transition:transform 340ms cubic-bezier(0.32,0.72,0.35,1);}}
+          .hero{background:linear-gradient(180deg,#051730 0%,#0A2E5C 100%);padding:22px 24px 18px;}
+          .heronum{font-family:'Source Serif 4',Georgia,serif;font-weight:600;font-size:54px;line-height:1;}
+          .stack{display:flex;gap:2px;height:26px;margin-top:4px;}
+          .stack .seg{height:26px;flex-basis:0;min-width:0;}
+          .seglbl{font-size:10px;font-weight:700;color:#FFFFFF;display:flex;align-items:center;justify-content:center;height:26px;overflow:hidden;white-space:nowrap;}
+          .legrow{display:flex;align-items:baseline;gap:8px;padding:7px 0;cursor:pointer;}
+          .legrow+.legrow{border-top:1px solid var(--bbva-line);}
+          .legrow:hover .leglbl{color:#6FAEE3;}
+          .legdot{width:9px;height:9px;border-radius:5px;flex:none;}
+          .leglbl{font-size:13px;color:var(--bbva-ink);flex:1;}
+          .legsub{font-size:11px;color:var(--bbva-ink-faint);}
+          .legamt{font-size:12px;color:var(--bbva-ink-dim);}
+          .legpct{font-size:12px;font-weight:700;width:38px;text-align:right;}
+          .legchev{font-size:11px;color:var(--bbva-ink-faint);width:10px;text-align:right;}
+          .backrow{display:flex;align-items:center;gap:6px;cursor:pointer;font-size:13px;font-weight:600;color:#49A5E6;}
+          .backrow:hover{color:#5BBEFF;}
+          .itemrow{display:flex;align-items:baseline;gap:8px;padding:8px 0;}
+          .itemrow+.itemrow{border-top:1px solid var(--bbva-line);}
+          .daycol{font-weight:600;color:var(--bbva-ink);}
+          .sechead{font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--bbva-ink-dim);}
+          .nets{display:flex;align-items:stretch;gap:3px;height:56px;}
+          .netcol{flex:1;position:relative;height:56px;}
+          .netzero{position:absolute;left:-2px;right:-2px;top:28px;height:1px;background:var(--bbva-line);}
+          .netbar{position:absolute;left:0;right:0;border-radius:2px;}
+          .recov{background:rgba(240,114,133,0.1);border:1px solid rgba(240,114,133,0.35);border-radius:8px;padding:10px 12px;font-size:12px;line-height:1.55;color:var(--bbva-ink-dim);}
+        </style>
+      </helmet>
+      <div style="min-height:100vh;background:var(--bbva-bg-deep);padding:1px;">
+        <div class="win" data-screen-label="Allowance">
+
+          <div class="titlebar">
+            <div class="dot" style="background:#FF5F57"></div>
+            <div class="dot" style="background:#FEBC2E"></div>
+            <div class="dot" style="background:#28C840"></div>
+            <div class="white" style="font-size:12px;font-weight:600;margin-left:10px;opacity:0.85">BBVA</div>
+            <div class="faint" style="font-size:12px;margin-left:auto">Synthetic sample · Jan 15</div>
+          </div>
+
+          <div class="viewport">
+
+            <div class="pane phome" style="{{ homeStyle }}" data-screen-label="Home">
+              <div class="hero">
+                <div style="font-size:12px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:#49A5E6">Your balance</div>
+                <div class="fx" style="align-items:baseline;gap:10px;margin-top:6px">
+                  <div class="coral mono heronum">−1,200</div>
+                  <div class="mono" style="font-size:14px;color:#8FB8DA">MXN · +400 lands daily</div>
+                </div>
+                <div class="mono" style="font-size:12px;color:#8FB8DA;margin-top:8px">spent today: 180 · typical slack: 40/day</div>
+                <div class="recov" style="margin-top:12px">
+                  <span class="coral" style="font-weight:700">1,200 behind.</span> Even in <span class="mono navy" style="font-weight:700">3 days</span> spending nothing — or by <span class="mono navy" style="font-weight:700">Feb 14</span> at typical pace. A cheap week beats a perfect day.
+                </div>
+              </div>
+
+              <div style="padding:16px 18px 6px" data-screen-label="Last 14 Days">
+                <div class="fx jb" style="align-items:baseline;margin-bottom:8px">
+                  <div class="sechead">Last 14 days · daily net</div>
+                  <div class="legsub mono">sample outlier: −1,200</div>
+                </div>
+                <div class="nets">
+                  <sc-for list="{{ nets }}" as="n" hint-placeholder-count="14">
+                    <div class="netcol">
+                      <div class="netzero"></div>
+                      <div class="netbar" style="{{ n.style }}"></div>
+                    </div>
+                  </sc-for>
+                </div>
+              </div>
+
+              <div style="padding:12px 18px 14px">
+                <div class="fx jb" style="align-items:baseline;margin-bottom:10px">
+                  <div class="sechead">Where the income goes</div>
+                  <div class="mono navy" style="font-size:13px;font-weight:700">45,000 <span class="dim" style="font-weight:400">· 1,500/day</span></div>
+                </div>
+
+                <div class="stack">
+                  <div class="seg" style="flex-grow:9000;background:var(--seg1);border-radius:5px 0 0 5px"><div class="seglbl">20%</div></div>
+                  <div class="seg" style="flex-grow:6000;background:var(--seg3)"><div class="seglbl" style="color:#08213D">DEBT 13%</div></div>
+                  <div class="seg" style="flex-grow:3000;background:var(--seg2)"><div class="seglbl">AI 7%</div></div>
+                  <div class="seg" style="flex-grow:9000;background:var(--seg4)"><div class="seglbl" style="color:#08213D">20%</div></div>
+                  <div class="seg" style="flex-grow:3000;background:var(--seg5)"><div class="seglbl" style="color:#08213D">7%</div></div>
+                  <div class="seg" style="flex-grow:15000;background:var(--bbva-teal);border-radius:0 5px 5px 0"><div class="seglbl" style="color:#04281E">YOURS 33%</div></div>
+                </div>
+
+                <div style="margin-top:12px">
+                  <sc-for list="{{ legend }}" as="g" hint-placeholder-count="6">
+                    <div class="legrow" onClick="{{ g.onTap }}" style="{{ g.rowStyle }}">
+                      <div class="legdot" style="{{ g.dotStyle }}"></div>
+                      <div class="leglbl" style="{{ g.lblStyle }}">{{ g.name }} <span class="legsub">{{ g.sub }}</span></div>
+                      <div class="legamt mono" style="{{ g.amtStyle }}">{{ g.amt }}</div>
+                      <div class="legpct mono" style="{{ g.pctStyle }}">{{ g.pct }}</div>
+                      <div class="legchev">›</div>
+                    </div>
+                  </sc-for>
+                </div>
+              </div>
+            </div>
+
+            <sc-if value="{{ detailMounted }}" hint-placeholder-val="{{ false }}">
+              <div class="pane pdetail" style="{{ detailStyle }}" data-screen-label="Detail">
+                <div class="hero">
+                  <div class="backrow" onClick="{{ goHome }}">‹ Back</div>
+                  <div class="fx" style="align-items:center;gap:8px;margin-top:14px">
+                    <div class="legdot" style="{{ d.dotStyle }}"></div>
+                    <div style="font-size:12px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:#49A5E6">{{ d.name }}</div>
+                  </div>
+                  <div class="fx" style="align-items:baseline;gap:10px;margin-top:6px">
+                    <div class="white mono heronum" style="font-size:44px">{{ d.big }}</div>
+                    <div class="mono" style="font-size:14px;color:#8FB8DA">{{ d.bigsub }}</div>
+                  </div>
+                  <div class="mono" style="font-size:12px;color:#8FB8DA;margin-top:8px">{{ d.note }}</div>
+                </div>
+
+                <div style="padding:16px 18px 14px">
+                  <div class="stack" style="margin-top:0">
+                    <sc-for list="{{ d.zoombar }}" as="s" hint-placeholder-count="4">
+                      <div class="seg" style="{{ s.style }}"><div class="seglbl" style="{{ s.lblStyle }}">{{ s.lbl }}</div></div>
+                    </sc-for>
+                  </div>
+                  <div class="legsub mono" style="margin-top:6px;margin-bottom:8px">{{ d.minicap }}</div>
+
+                  <sc-for list="{{ d.items }}" as="it" hint-placeholder-count="5">
+                    <div class="itemrow">
+                      <div class="legdot" style="{{ it.dotStyle }}"></div>
+                      <div class="leglbl">{{ it.name }}</div>
+                      <div class="legamt mono">{{ it.mo }}/mo · <span class="daycol">{{ it.day }}/day</span></div>
+                      <div class="legpct mono navy">{{ it.pct }}</div>
+                    </div>
+                  </sc-for>
+                  <sc-if value="{{ d.foot }}" hint-placeholder-val="{{ true }}">
+                    <div class="legsub" style="margin-top:12px;line-height:1.5;font-size:11.5px">{{ d.foot }}</div>
+                  </sc-if>
+                </div>
+              </div>
+            </sc-if>
+
+          </div>
+
+        </div>
+      </div>
+    </x-dc>
+    <script
+      type="text/x-dc"
+      data-dc-script
+      data-props='{
+  "$preview": { "width": 470, "height": 660 }
+}'
+    >
+      class Component extends DCLogic {
+        constructor(props) {
+          super(props);
+          this.state = { view: "home", pos: "home", detailMounted: false };
+        }
+        push(key) {
+          var self = this;
+          this.setState({ view: key, detailMounted: true, pos: "home" });
+          setTimeout(function () { self.setState({ pos: "detail" }); }, 20);
+        }
+        pop() {
+          var self = this;
+          this.setState({ pos: "home" });
+          setTimeout(function () { self.setState({ detailMounted: false, view: "home" }); }, 360);
+        }
+        renderVals() {
+          var self = this;
+          var NETS = [40, 90, -60, 20, 150, -1200, 130, 40, -180, 400, -80, 55, 110, 125];
+          var maxAbs = NETS.reduce(function (m, v) { return Math.max(m, Math.abs(v)); }, 1);
+          var nets = NETS.map(function (v) {
+            var frac = Math.abs(v) / maxAbs;
+            var h = Math.max(3, Math.round(26 * Math.sqrt(frac)));
+            var pos = v >= 0;
+            var style = pos
+              ? "top:" + (28 - h) + "px;height:" + h + "px;background:var(--bbva-teal)"
+              : "top:29px;height:" + h + "px;background:var(--bbva-coral)";
+            return { style: style };
+          });
+          var COLORS = { health: "#3A6EA8", ai: "#4E8FD0", debt: "#6FAEE3", housing: "#9CCAF0", other: "#C7E1F8", yours: "#35B392" };
+          var CATS = {
+            health: { name: "Health", big: "300", bigsub: "MXN per day · 9,000/mo · 20%", note: "Synthetic healthcare commitments.", minicap: "Health, zoomed · 20% of income · 300 of the daily 1,500",
+              items: [
+                { name: "Family healthcare", mo: 4500, day: 150 },
+                { name: "Prescriptions", mo: 2500, day: 83 },
+                { name: "Fitness", mo: 1200, day: 40 },
+                { name: "Insurance", mo: 800, day: 27 }
+              ],
+              foot: "Fixture values are illustrative and do not describe a person." },
+            debt: { name: "Debt", big: "200", bigsub: "MXN per day · 6,000/mo · 13%", note: "Synthetic obligations with fixed schedules.", minicap: "Debt, zoomed · 13% of income · 200 of the daily 1,500",
+              items: [
+                { name: "Education plan", mo: 2500, day: 83 },
+                { name: "Appliance plan", mo: 2000, day: 67 },
+                { name: "Device plan", mo: 1500, day: 50 }
+              ],
+              foot: "Fixture schedules are intentionally generic." },
+            ai: { name: "AI", big: "100", bigsub: "MXN per day · 3,000/mo · 7%", note: "Synthetic software commitments.", minicap: "AI, zoomed · 7% of income · 100 of the daily 1,500",
+              items: [
+                { name: "AI assistant", mo: 1800, day: 60 },
+                { name: "Transcription service", mo: 1200, day: 40 }
+              ],
+              foot: "Usage-based software remains variable spend." },
+            housing: { name: "Housing & utilities", big: "300", bigsub: "MXN per day · 9,000/mo · 20%", note: "Synthetic housing costs.", minicap: "Housing & utilities, zoomed · 20% of income · 300 of the daily 1,500",
+              items: [
+                { name: "Rent", mo: 7500, day: 250 },
+                { name: "Internet", mo: 1000, day: 33 },
+                { name: "Power", mo: 500, day: 17 }
+              ],
+              foot: "" },
+            other: { name: "Other fixed", big: "100", bigsub: "MXN per day · 3,000/mo · 7%", note: "Synthetic fixed services.", minicap: "Other fixed, zoomed · 7% of income · 100 of the daily 1,500",
+              items: [
+                { name: "Mobile", mo: 1000, day: 33 },
+                { name: "Streaming", mo: 800, day: 27 },
+                { name: "Cloud storage", mo: 700, day: 23 },
+                { name: "Accounting", mo: 500, day: 17 }
+              ],
+              foot: "Names and values are illustrative." },
+            yours: { name: "Yours", big: "500", bigsub: "MXN per day · 15,000/mo · 33%", note: "Synthetic variable-spend baseline.", minicap: "Yours, zoomed · 33% of income · 500 of the daily 1,500",
+              items: [
+                { name: "Food", mo: 5000, day: 167 },
+                { name: "Shopping", mo: 3500, day: 117 },
+                { name: "Rides", mo: 3000, day: 100 },
+                { name: "Convenience", mo: 2000, day: 67 },
+                { name: "Usage software", mo: 1500, day: 50 }
+              ],
+              foot: "Fixture values leave a small illustrative daily margin." }
+          };
+          var ORDER = [
+            { key: "health", name: "Health", sub: "", amt: "9,000/mo · 300/day", pct: "20%" },
+            { key: "debt", name: "Debt", sub: "sample installments", amt: "6,000/mo · 200/day", pct: "13%" },
+            { key: "ai", name: "AI", sub: "sample software", amt: "3,000/mo · 100/day", pct: "7%" },
+            { key: "housing", name: "Housing & utilities", sub: "", amt: "9,000/mo · 300/day", pct: "20%" },
+            { key: "other", name: "Other fixed", sub: "services · subs · software", amt: "3,000/mo · 100/day", pct: "7%" },
+            { key: "yours", name: "Yours", sub: "", amt: "15,000/mo · 500/day", pct: "33%" }
+          ];
+          var legend = ORDER.map(function (g) {
+            var isYours = g.key === "yours";
+            return {
+              name: g.name, sub: g.sub, amt: g.amt, pct: g.pct,
+              dotStyle: "background:" + COLORS[g.key],
+              rowStyle: isYours ? "border-top:2px solid var(--bbva-teal)" : "",
+              lblStyle: isYours ? "font-weight:700" : "",
+              amtStyle: isYours ? "color:var(--bbva-teal);font-weight:600" : "",
+              pctStyle: isYours ? "color:var(--bbva-teal)" : "color:var(--bbva-ink)",
+              onTap: function () { self.push(g.key); }
+            };
+          });
+          var onDetail = this.state.pos === "detail";
+          var d = null;
+          if (this.state.view !== "home") {
+            var key = this.state.view;
+            var c = CATS[key];
+            var base = COLORS[key];
+            var total = c.items.reduce(function (s, it) { return s + it.mo; }, 0);
+            var n = c.items.length;
+            var shade = function (i) {
+              var mix = n === 1 ? 0 : Math.round(50 * i / (n - 1));
+              return "color-mix(in oklab, " + base + ", white " + mix + "%)";
+            };
+            d = {
+              name: c.name, big: c.big, bigsub: c.bigsub, note: c.note, foot: c.foot, minicap: c.minicap,
+              dotStyle: "background:" + base + ";width:11px;height:11px",
+              zoombar: c.items.map(function (it, i) {
+                var pct = 100 * it.mo / total;
+                var radius = (i === 0 ? "border-radius:5px 0 0 5px;" : (i === n - 1 ? "border-radius:0 5px 5px 0;" : ""));
+                var lightSeg = key === "housing" || key === "other" || key === "debt" || (n > 1 && i / (n - 1) > 0.4);
+                return {
+                  style: "flex-grow:" + it.mo + ";background:" + shade(i) + ";" + radius,
+                  lbl: pct >= 9 ? Math.round(pct) + "%" : "",
+                  lblStyle: lightSeg ? "color:#08213D" : ""
+                };
+              }),
+              items: c.items.map(function (it, i) {
+                return {
+                  name: it.name,
+                  mo: it.mo.toLocaleString("en-US"),
+                  day: it.day.toLocaleString("en-US"),
+                  pct: Math.round(100 * it.mo / total) + "%",
+                  dotStyle: "background:" + shade(i)
+                };
+              })
+            };
+          }
+          return {
+            legend: legend,
+            nets: nets,
+            detailMounted: this.state.detailMounted,
+            homeStyle: "transform:translateX(" + (onDetail ? "-28%" : "0") + ")",
+            detailStyle: "transform:translateX(" + (onDetail ? "0" : "102%") + ")",
+            d: d || { name: "", big: "", bigsub: "", note: "", foot: "", minicap: "", dotStyle: "", zoombar: [], items: [] },
+            goHome: function () { self.pop(); }
+          };
+        }
+      }
+    </script>
+  </body>
+</html>

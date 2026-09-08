@@ -1,0 +1,4 @@
+interface:
+  display_name: "BBVA"
+  short_description: "Read and maintain private BBVA records"
+  default_prompt: "Use $bank to inspect my private BBVA records safely."

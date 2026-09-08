@@ -1,0 +1,80 @@
+name: Bancomer
+
+options:
+  bundleIdPrefix: com.pedroavj
+  deploymentTarget:
+    iOS: "26.0"
+  xcodeVersion: "26.0"
+
+packages:
+  Sentry:
+    url: https://github.com/getsentry/sentry-cocoa.git
+    exactVersion: 9.24.0
+
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    IPHONEOS_DEPLOYMENT_TARGET: "26.0"
+    ENABLE_USER_SCRIPT_SANDBOXING: YES
+    SENTRY_DSN: ""
+
+targets:
+  Bancomer:
+    type: application
+    platform: iOS
+    sources:
+      - path: Bancomer
+    resources:
+      - path: Bancomer/Resources
+    dependencies:
+      - package: Sentry
+        product: Sentry
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.pedroavj.bancomer
+        PRODUCT_NAME: Bancomer
+        MARKETING_VERSION: "1.0"
+        CURRENT_PROJECT_VERSION: "1"
+        CODE_SIGN_STYLE: Automatic
+        TARGETED_DEVICE_FAMILY: "1"
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        SUPPORTS_MACCATALYST: NO
+    info:
+      path: Bancomer/Info.plist
+      properties:
+        CFBundleDisplayName: Bancomer
+        CFBundleShortVersionString: "$(MARKETING_VERSION)"
+        CFBundleVersion: "$(CURRENT_PROJECT_VERSION)"
+        LSRequiresIPhoneOS: true
+        UIApplicationSceneManifest:
+          UIApplicationSupportsMultipleScenes: false
+        UILaunchScreen: {}
+        UIAppFonts:
+          - LibreFranklin-Variable.ttf
+          - SourceSerif4-Variable.ttf
+        SentryDSN: "$(SENTRY_DSN)"
+        ITSAppUsesNonExemptEncryption: false
+
+  BancomerTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: BancomerTests
+    dependencies:
+      - target: Bancomer
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.pedroavj.bancomer.tests
+        CODE_SIGNING_ALLOWED: NO
+
+schemes:
+  Bancomer:
+    build:
+      targets:
+        Bancomer: all
+        BancomerTests: [test]
+    test:
+      targets:
+        - BancomerTests
+    archive:
+      config: Release

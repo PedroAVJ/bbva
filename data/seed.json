@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "dataMode": "sample",
+  "asOfDate": "2026-01-15",
+  "dateLabel": "Synthetic sample · Jan 15",
+  "currency": "MXN",
+  "balanceMxn": -1200,
+  "dailyCreditMxn": 400,
+  "spentTodayMxn": 180,
+  "typicalSlackDailyMxn": 40,
+  "incomeMonthlyMxn": 45000,
+  "typicalVariableMonthlyMxn": 14000,
+  "outlierNote": "sample outlier: −1,200",
+  "dailyNetsMxn": [40, 90, -60, 20, 150, -1200, 130, 40, -180, 400, -80, 55, 110, 125],
+  "categories": [
+    {
+      "id": "health",
+      "name": "Health",
+      "subtitle": "",
+      "monthlyMxn": 9000,
+      "color": "#3A6EA8",
+      "note": "Synthetic healthcare commitments.",
+      "footnote": "Fixture values are illustrative and do not describe a person.",
+      "items": [
+        { "name": "Family healthcare", "monthlyMxn": 4500 },
+        { "name": "Prescriptions", "monthlyMxn": 2500 },
+        { "name": "Fitness", "monthlyMxn": 1200 },
+        { "name": "Insurance", "monthlyMxn": 800 }
+      ]
+    },
+    {
+      "id": "debt",
+      "name": "Debt",
+      "subtitle": "sample installments",
+      "monthlyMxn": 6000,
+      "color": "#6FAEE3",
+      "note": "Synthetic obligations with fixed schedules.",
+      "footnote": "Fixture schedules are intentionally generic.",
+      "items": [
+        { "name": "Education plan", "monthlyMxn": 2500 },
+        { "name": "Appliance plan", "monthlyMxn": 2000 },
+        { "name": "Device plan", "monthlyMxn": 1500 }
+      ]
+    },
+    {
+      "id": "ai",
+      "name": "AI",
+      "subtitle": "sample software",
+      "monthlyMxn": 3000,
+      "color": "#4E8FD0",
+      "note": "Synthetic software commitments.",
+      "footnote": "Usage-based software remains variable spend.",
+      "items": [
+        { "name": "AI assistant", "monthlyMxn": 1800 },
+        { "name": "Transcription service", "monthlyMxn": 1200 }
+      ]
+    },
+    {
+      "id": "housing",
+      "name": "Housing & utilities",
+      "subtitle": "",
+      "monthlyMxn": 9000,
+      "color": "#9CCAF0",
+      "note": "Synthetic housing costs.",
+      "footnote": "",
+      "items": [
+        { "name": "Rent", "monthlyMxn": 7500 },
+        { "name": "Internet", "monthlyMxn": 1000 },
+        { "name": "Power", "monthlyMxn": 500 }
+      ]
+    },
+    {
+      "id": "other",
+      "name": "Other fixed",
+      "subtitle": "services · subs · software",
+      "monthlyMxn": 3000,
+      "color": "#C7E1F8",
+      "note": "Synthetic fixed services.",
+      "footnote": "Names and values are illustrative.",
+      "items": [
+        { "name": "Mobile", "monthlyMxn": 1000 },
+        { "name": "Streaming", "monthlyMxn": 800 },
+        { "name": "Cloud storage", "monthlyMxn": 700 },
+        { "name": "Accounting", "monthlyMxn": 500 }
+      ]
+    },
+    {
+      "id": "yours",
+      "name": "Yours",
+      "subtitle": "",
+      "monthlyMxn": 15000,
+      "color": "#35B392",
+      "note": "Synthetic variable-spend baseline.",
+      "footnote": "Fixture values leave a small illustrative daily margin.",
+      "items": [
+        { "name": "Food", "monthlyMxn": 5000 },
+        { "name": "Shopping", "monthlyMxn": 3500 },
+        { "name": "Rides", "monthlyMxn": 3000 },
+        { "name": "Convenience", "monthlyMxn": 2000 },
+        { "name": "Usage software", "monthlyMxn": 1500 }
+      ]
+    }
+  ]
+}

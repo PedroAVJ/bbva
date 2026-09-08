@@ -1,0 +1,40 @@
+:root{
+/* base — dark mode is canonical */
+--bbva-navy:#051730;
+--bbva-bg:#0E1E33;
+--bbva-bg-deep:#0A1526;
+--bbva-line:#20395B;
+--bbva-ink:#E8EEF5;
+--bbva-ink-dim:#9FB3C8;
+--bbva-ink-faint:#66809B;
+--bbva-coral:#F07285;
+--bbva-teal:#35B392;
+--seg1:#3A6EA8;
+--seg2:#4E8FD0;
+--seg3:#6FAEE3;
+--seg4:#9CCAF0;
+--seg5:#C7E1F8;
+--bbva-accent-aqua:#49A5E6;
+--bbva-accent-aqua-hover:#5BBEFF;
+--bbva-hero-end:#0A2E5C;
+--bbva-hero-subtext:#8FB8DA;
+--bbva-seg-label-dark:#08213D;
+--bbva-seg-label-teal-dark:#04281E;
+/* semantic aliases */
+--surface-app:var(--bbva-bg);
+--surface-backdrop:var(--bbva-bg-deep);
+--surface-titlebar:var(--bbva-navy);
+--surface-hero:linear-gradient(180deg,var(--bbva-navy) 0%,var(--bbva-hero-end) 100%);
+--text-body:var(--bbva-ink);
+--text-secondary:var(--bbva-ink-dim);
+--text-tertiary:var(--bbva-ink-faint);
+--text-on-hero-muted:var(--bbva-hero-subtext);
+--text-kicker:var(--bbva-accent-aqua);
+--text-link:var(--seg3);
+--text-link-hover:var(--seg4);
+--color-negative:var(--bbva-coral);
+--color-positive:var(--bbva-teal);
+--border-hairline:var(--bbva-line);
+--recovery-bg:rgba(240,114,133,0.1);
+--recovery-border:rgba(240,114,133,0.35);
+}

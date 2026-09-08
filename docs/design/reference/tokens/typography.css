@@ -1,0 +1,14 @@
+:root{
+--bbva-font-ui:'Libre Franklin',-apple-system,sans-serif;
+--bbva-font-display:'Source Serif 4',Georgia,serif;
+--font-ui:var(--bbva-font-ui);
+--font-display:var(--bbva-font-display);
+/* type roles (from Allowance Mini + SwiftUI views) */
+--text-hero-num:600 54px/1 var(--bbva-font-display); /* balance hero; detail hero 44px */
+--text-kicker-style:600 12px/1.2 var(--bbva-font-ui); /* uppercase, letter-spacing .06em, aqua */
+--text-sechead:700 11px/1.2 var(--bbva-font-ui);      /* uppercase, letter-spacing .08em, ink-dim */
+--text-row-label:400 13px/1.4 var(--bbva-font-ui);
+--text-row-amount:400 12px/1.4 var(--bbva-font-ui);
+--text-row-sub:400 11px/1.4 var(--bbva-font-ui);
+--text-explainer:400 12px/1.55 var(--bbva-font-ui);
+}

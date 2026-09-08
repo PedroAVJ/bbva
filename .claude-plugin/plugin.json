@@ -1,0 +1,20 @@
+{
+  "name": "bbva",
+  "version": "0.2.4",
+  "description": "Maintain the user's private BBVA records and native macOS spending view without placing personal data in the plugin package.",
+  "author": {
+    "name": "PedroAVJ",
+    "url": "https://github.com/PedroAVJ"
+  },
+  "homepage": "https://github.com/PedroAVJ/bbva",
+  "repository": "https://github.com/PedroAVJ/bbva",
+  "license": "MIT",
+  "keywords": [
+    "bank",
+    "bbva",
+    "finance",
+    "macos",
+    "private-store"
+  ],
+  "skills": "./skills/"
+}

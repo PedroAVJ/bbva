@@ -1,0 +1,11 @@
+:root{
+--bbva-space:8px;            /* 8px grid */
+--bbva-radius-frame:12px;    /* window/app frame */
+--bbva-radius-bar:5px;       /* composition bar outer corners */
+--bbva-radius-card:8px;      /* recovery card */
+--bbva-seg-gap:2px;          /* gap between bar segments */
+--bbva-hairline:1px solid var(--bbva-line);
+--bbva-accent-rule:2px;      /* accent rule before totals ("Yours" row) */
+--bbva-pad-hero:22px 24px 18px;
+--bbva-pad-section:16px 18px;
+}

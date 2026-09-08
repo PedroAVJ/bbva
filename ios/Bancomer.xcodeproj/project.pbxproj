@@ -1,0 +1,563 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0970833DF2DD2BFD1FC6FD28 /* SourceSerif4-Variable.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A6E909540A2B7DDA7AED37E9 /* SourceSerif4-Variable.ttf */; };
+		0D41F8BCA6ABCA867A00B9FF /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E9DE4E1104C8C64EA08288 /* DashboardView.swift */; };
+		1636B77E911AB4DFE997D5BB /* BancomerTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07F8803C95EC02D964558A7 /* BancomerTheme.swift */; };
+		244663FE8E9937EFD04E116A /* BancomerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FA365AFD39F4A114FA79DB /* BancomerApp.swift */; };
+		2F46230475C14E4CB9616E54 /* AddTransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EDE937D54414EE1B8C0059 /* AddTransactionView.swift */; };
+		3DCE9675D41B581AD61B71A6 /* LedgerTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18C554872A3670BF329FF1F /* LedgerTransaction.swift */; };
+		41F638A9FE6A614D9F215C8A /* LedgerPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326ED96CF64CC68DCE77DD70 /* LedgerPersistence.swift */; };
+		68FF04DB618A74EC45B00402 /* Telemetry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBF171D4898EC3B9FEF97E1 /* Telemetry.swift */; };
+		7B066327D755AA264C392BCE /* CategoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B597653B36EA6FFBFE38C80F /* CategoryRow.swift */; };
+		82A62600ECCD298D89945F11 /* LibreFranklin-Variable.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C0EDDF01A1230EBCE21D712B /* LibreFranklin-Variable.ttf */; };
+		830C95BDD29A6FC003D001C5 /* CategoryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57E78D3A3FF3AE102B49D19 /* CategoryDetailView.swift */; };
+		A2FF470F06721727910C8BCC /* LedgerStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E681DE91DBA5972D9212D41C /* LedgerStore.swift */; };
+		A9C9A280173ED649A12A4B74 /* TransactionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9FC5D330167B95F15FAA90 /* TransactionRow.swift */; };
+		C14396E9E69A15794A63573B /* CompositionBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A5B21CA8C930B6A15A06EB /* CompositionBar.swift */; };
+		C6B4ABE48F290BF7EB0FFE71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBA7679B0FD7CE01D53737C2 /* Assets.xcassets */; };
+		ECF788F9E7EBCDC9F338EB77 /* Sentry in Frameworks */ = {isa = PBXBuildFile; productRef = 39E54CF11A50E64D6B31242C /* Sentry */; };
+		F5A00DE22C35C1CE8EF9B34C /* FinanceFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DBBC28C3E6EC5253D2F1C7 /* FinanceFormat.swift */; };
+		F89DF78A74A9DB2A4D150AB7 /* LedgerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DDBE3E2A48E65F78B3B6FD /* LedgerTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A50B81278F284EA05AF1B756 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0A0CCD1DB6F2311563C261C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B66343586EECA5B4E0C890CE;
+			remoteInfo = Bancomer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		05DDBE3E2A48E65F78B3B6FD /* LedgerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LedgerTests.swift; sourceTree = "<group>"; };
+		0AD18017BFCE1509FFE98A82 /* Bancomer.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Bancomer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		14DBBC28C3E6EC5253D2F1C7 /* FinanceFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceFormat.swift; sourceTree = "<group>"; };
+		326ED96CF64CC68DCE77DD70 /* LedgerPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LedgerPersistence.swift; sourceTree = "<group>"; };
+		33EDE937D54414EE1B8C0059 /* AddTransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionView.swift; sourceTree = "<group>"; };
+		5AA5D8B1FB611F99EA1A3F40 /* BancomerTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = BancomerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EBF171D4898EC3B9FEF97E1 /* Telemetry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Telemetry.swift; sourceTree = "<group>"; };
+		7B9D61E2D19887FC8B296AF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		A07F8803C95EC02D964558A7 /* BancomerTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BancomerTheme.swift; sourceTree = "<group>"; };
+		A6E909540A2B7DDA7AED37E9 /* SourceSerif4-Variable.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSerif4-Variable.ttf"; sourceTree = "<group>"; };
+		B0FA365AFD39F4A114FA79DB /* BancomerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BancomerApp.swift; sourceTree = "<group>"; };
+		B597653B36EA6FFBFE38C80F /* CategoryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRow.swift; sourceTree = "<group>"; };
+		BBA7679B0FD7CE01D53737C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C0EDDF01A1230EBCE21D712B /* LibreFranklin-Variable.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LibreFranklin-Variable.ttf"; sourceTree = "<group>"; };
+		CB9FC5D330167B95F15FAA90 /* TransactionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRow.swift; sourceTree = "<group>"; };
+		D18C554872A3670BF329FF1F /* LedgerTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LedgerTransaction.swift; sourceTree = "<group>"; };
+		D57E78D3A3FF3AE102B49D19 /* CategoryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDetailView.swift; sourceTree = "<group>"; };
+		E681DE91DBA5972D9212D41C /* LedgerStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LedgerStore.swift; sourceTree = "<group>"; };
+		E6E9DE4E1104C8C64EA08288 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		F4A5B21CA8C930B6A15A06EB /* CompositionBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionBar.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AE0AEBED94AAFFA50EA21E15 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECF788F9E7EBCDC9F338EB77 /* Sentry in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0388C648A0D9A38760AE4465 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0AD18017BFCE1509FFE98A82 /* Bancomer.app */,
+				5AA5D8B1FB611F99EA1A3F40 /* BancomerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0BCFA9FF6EB9958EEFEC98CD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BBA7679B0FD7CE01D53737C2 /* Assets.xcassets */,
+				F9F3AC48A9B8E6686DA607F8 /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3722829328FD5904ED09E312 /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+				326ED96CF64CC68DCE77DD70 /* LedgerPersistence.swift */,
+				E681DE91DBA5972D9212D41C /* LedgerStore.swift */,
+			);
+			path = Stores;
+			sourceTree = "<group>";
+		};
+		4BE7ADD80E27481EBC60EB97 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				33EDE937D54414EE1B8C0059 /* AddTransactionView.swift */,
+				D57E78D3A3FF3AE102B49D19 /* CategoryDetailView.swift */,
+				B597653B36EA6FFBFE38C80F /* CategoryRow.swift */,
+				F4A5B21CA8C930B6A15A06EB /* CompositionBar.swift */,
+				E6E9DE4E1104C8C64EA08288 /* DashboardView.swift */,
+				CB9FC5D330167B95F15FAA90 /* TransactionRow.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5726092411C001B98DA8EF08 /* Bancomer */ = {
+			isa = PBXGroup;
+			children = (
+				7B9D61E2D19887FC8B296AF6 /* Info.plist */,
+				EF18C631A1CD1950ECA4B06F /* App */,
+				A752C26FECC0A491E60C03A7 /* Models */,
+				0BCFA9FF6EB9958EEFEC98CD /* Resources */,
+				3722829328FD5904ED09E312 /* Stores */,
+				92BB991FAB2135DCD744D5D5 /* Support */,
+				4BE7ADD80E27481EBC60EB97 /* Views */,
+			);
+			path = Bancomer;
+			sourceTree = "<group>";
+		};
+		92BB991FAB2135DCD744D5D5 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				A07F8803C95EC02D964558A7 /* BancomerTheme.swift */,
+				14DBBC28C3E6EC5253D2F1C7 /* FinanceFormat.swift */,
+				6EBF171D4898EC3B9FEF97E1 /* Telemetry.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		9320B136A9B0656881AB4BCF /* BancomerTests */ = {
+			isa = PBXGroup;
+			children = (
+				05DDBE3E2A48E65F78B3B6FD /* LedgerTests.swift */,
+			);
+			path = BancomerTests;
+			sourceTree = "<group>";
+		};
+		A149ECEE49F9D91D9B985ECC = {
+			isa = PBXGroup;
+			children = (
+				5726092411C001B98DA8EF08 /* Bancomer */,
+				9320B136A9B0656881AB4BCF /* BancomerTests */,
+				0388C648A0D9A38760AE4465 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A752C26FECC0A491E60C03A7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D18C554872A3670BF329FF1F /* LedgerTransaction.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EF18C631A1CD1950ECA4B06F /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B0FA365AFD39F4A114FA79DB /* BancomerApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		F9F3AC48A9B8E6686DA607F8 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C0EDDF01A1230EBCE21D712B /* LibreFranklin-Variable.ttf */,
+				A6E909540A2B7DDA7AED37E9 /* SourceSerif4-Variable.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		09B2E9CEC87FB2447CFCEF0A /* BancomerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22169349ABD36D96BFBD8DC8 /* Build configuration list for PBXNativeTarget "BancomerTests" */;
+			buildPhases = (
+				C315313D9381E997346CC354 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F8BB7B4410D4435B4EEB62C9 /* PBXTargetDependency */,
+			);
+			name = BancomerTests;
+			packageProductDependencies = (
+			);
+			productName = BancomerTests;
+			productReference = 5AA5D8B1FB611F99EA1A3F40 /* BancomerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B66343586EECA5B4E0C890CE /* Bancomer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4E91B656C713A3FB7E6AD78B /* Build configuration list for PBXNativeTarget "Bancomer" */;
+			buildPhases = (
+				2668A5792B20F8D2E4CA0562 /* Sources */,
+				6F472AF6C2C2A34E6C0D07DD /* Resources */,
+				AE0AEBED94AAFFA50EA21E15 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Bancomer;
+			packageProductDependencies = (
+				39E54CF11A50E64D6B31242C /* Sentry */,
+			);
+			productName = Bancomer;
+			productReference = 0AD18017BFCE1509FFE98A82 /* Bancomer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D0A0CCD1DB6F2311563C261C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 2600;
+				TargetAttributes = {
+					B66343586EECA5B4E0C890CE = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = BCEF0EF712F73A2AB4EA3C55 /* Build configuration list for PBXProject "Bancomer" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = A149ECEE49F9D91D9B985ECC;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				94616386D507C03195F2C682 /* XCRemoteSwiftPackageReference "sentry-cocoa" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 0388C648A0D9A38760AE4465 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B66343586EECA5B4E0C890CE /* Bancomer */,
+				09B2E9CEC87FB2447CFCEF0A /* BancomerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6F472AF6C2C2A34E6C0D07DD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6B4ABE48F290BF7EB0FFE71 /* Assets.xcassets in Resources */,
+				82A62600ECCD298D89945F11 /* LibreFranklin-Variable.ttf in Resources */,
+				0970833DF2DD2BFD1FC6FD28 /* SourceSerif4-Variable.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2668A5792B20F8D2E4CA0562 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F46230475C14E4CB9616E54 /* AddTransactionView.swift in Sources */,
+				244663FE8E9937EFD04E116A /* BancomerApp.swift in Sources */,
+				1636B77E911AB4DFE997D5BB /* BancomerTheme.swift in Sources */,
+				830C95BDD29A6FC003D001C5 /* CategoryDetailView.swift in Sources */,
+				7B066327D755AA264C392BCE /* CategoryRow.swift in Sources */,
+				C14396E9E69A15794A63573B /* CompositionBar.swift in Sources */,
+				0D41F8BCA6ABCA867A00B9FF /* DashboardView.swift in Sources */,
+				F5A00DE22C35C1CE8EF9B34C /* FinanceFormat.swift in Sources */,
+				41F638A9FE6A614D9F215C8A /* LedgerPersistence.swift in Sources */,
+				A2FF470F06721727910C8BCC /* LedgerStore.swift in Sources */,
+				3DCE9675D41B581AD61B71A6 /* LedgerTransaction.swift in Sources */,
+				68FF04DB618A74EC45B00402 /* Telemetry.swift in Sources */,
+				A9C9A280173ED649A12A4B74 /* TransactionRow.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C315313D9381E997346CC354 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F89DF78A74A9DB2A4D150AB7 /* LedgerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F8BB7B4410D4435B4EEB62C9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B66343586EECA5B4E0C890CE /* Bancomer */;
+			targetProxy = A50B81278F284EA05AF1B756 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		23866169492D887DD03DC358 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGNING_ALLOWED = NO;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pedroavj.bancomer.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bancomer.app/Bancomer";
+			};
+			name = Release;
+		};
+		5C1887CE8689F46AADA66172 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGNING_ALLOWED = NO;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pedroavj.bancomer.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bancomer.app/Bancomer";
+			};
+			name = Debug;
+		};
+		A77800035DD7EABB4406C7D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = Bancomer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pedroavj.bancomer;
+				PRODUCT_NAME = Bancomer;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		BD746B59FDE4F360E6AABD30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SENTRY_DSN = "";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		C175A88BDEDC5D741A70EFDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = Bancomer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pedroavj.bancomer;
+				PRODUCT_NAME = Bancomer;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		F39CA19F2ACC391FB3478EE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SENTRY_DSN = "";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		22169349ABD36D96BFBD8DC8 /* Build configuration list for PBXNativeTarget "BancomerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C1887CE8689F46AADA66172 /* Debug */,
+				23866169492D887DD03DC358 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		4E91B656C713A3FB7E6AD78B /* Build configuration list for PBXNativeTarget "Bancomer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C175A88BDEDC5D741A70EFDE /* Debug */,
+				A77800035DD7EABB4406C7D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		BCEF0EF712F73A2AB4EA3C55 /* Build configuration list for PBXProject "Bancomer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F39CA19F2ACC391FB3478EE0 /* Debug */,
+				BD746B59FDE4F360E6AABD30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		94616386D507C03195F2C682 /* XCRemoteSwiftPackageReference "sentry-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/getsentry/sentry-cocoa.git";
+			requirement = {
+				kind = exactVersion;
+				version = 9.24.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		39E54CF11A50E64D6B31242C /* Sentry */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 94616386D507C03195F2C682 /* XCRemoteSwiftPackageReference "sentry-cocoa" */;
+			productName = Sentry;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = D0A0CCD1DB6F2311563C261C /* Project object */;
+}

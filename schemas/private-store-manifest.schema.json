@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/PedroAVJ/bbva/schemas/private-store-manifest.schema.json",
+  "title": "Bank private store manifest",
+  "type": "object",
+  "required": ["schemaVersion", "entries"],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "entries": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["sha256", "bytes", "importedAt", "provenance"],
+        "properties": {
+          "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+          "bytes": { "type": "integer", "minimum": 0 },
+          "importedAt": { "type": "string", "format": "date-time" },
+          "provenance": {
+            "type": "object",
+            "required": ["repository", "revision", "relativePath"],
+            "properties": {
+              "repository": { "type": "string", "minLength": 1 },
+              "revision": { "type": "string", "minLength": 1 },
+              "relativePath": { "type": "string", "minLength": 1 }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

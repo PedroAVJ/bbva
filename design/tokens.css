@@ -1,0 +1,25 @@
+:root {
+  /* dark mode — canonical */
+  --bbva-navy: #051730;
+  --bbva-bg: #0E1E33;
+  --bbva-bg-deep: #0A1526;
+  --bbva-line: #20395B;
+  --bbva-ink: #E8EEF5;
+  --bbva-ink-dim: #9FB3C8;
+  --bbva-ink-faint: #66809B;
+  --bbva-coral: #F07285;
+  --bbva-teal: #35B392;
+  --seg1: #3A6EA8;
+  --seg2: #4E8FD0;
+  --seg3: #6FAEE3;
+  --seg4: #9CCAF0;
+  --seg5: #C7E1F8;
+  --bbva-accent-aqua: #49A5E6;
+  --bbva-hero-subtext: #8FB8DA;
+  --bbva-radius-frame: 12px;
+  --bbva-radius-bar: 5px;
+  --bbva-space: 8px;
+  --bbva-font-ui: 'Libre Franklin', -apple-system, sans-serif;
+  --bbva-font-display: 'Source Serif 4', Georgia, serif;
+  --bbva-motion-push: 340ms cubic-bezier(0.32, 0.72, 0.35, 1);
+}
