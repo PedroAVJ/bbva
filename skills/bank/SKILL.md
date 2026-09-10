@@ -1,6 +1,6 @@
 ---
 name: bank
-description: Read, verify, import, or maintain the user's BBVA-owned records through the BBVA plugin's private local store. Use for BBVA statements, transactions, balances, account roles and identifiers, deposit cadence, bank-linked insurance, merchant categorization, recurring commitments, and derived spending data.
+description: Read, verify, import, or maintain the user's BBVA-owned records through the BBVA plugin's private local store. Use for BBVA statements, transactions, balances, account roles and identifiers, deposit cadence, bank-linked insurance, merchant categorization, recurring commitments, financial net worth, monthly net cash run rate, and derived spending data.
 ---
 
 # BBVA
@@ -10,6 +10,16 @@ For source work, use a task-specific clone and never edit an installed cache.
 Keep personal bank data out of that repository and out of other corpora. The
 private store defaults to
 `~/Library/Application Support/com.pedroavj.bbva/PrivateStore`.
+
+## Default financial summary
+
+For net worth, net run rate, monthly cash surplus/shortfall, or a general personal
+financial summary, read [the financial metrics contract](references/financial-metrics.md).
+Report **financial net worth** and **monthly net cash run rate** by those names.
+Cash run rate includes card installments, parents/family repayments and tax/loan
+principal payments. Never silently replace it with accrual income, depreciation,
+net-worth change or the number of paychecks received. Use balances to constrain
+missing-statement estimates, and count each obligation once.
 
 ## Read and verify
 

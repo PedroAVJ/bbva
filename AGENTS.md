@@ -12,7 +12,6 @@
   owns only stable procedures, schemas, code, and tests.
 - Preserve DashboardSnapshot and DashboardDataSource when replacing the seed
   loader with a private daemon or SQLite store.
-- Do not publish or create a remote without the user's explicit request.
 - Build with one worker by default to bound memory usage. Run Swift and private-store tests plus
   the native app build before a release. Perform a real-window acceptance check
   only when UI behavior changes or a release is requested.

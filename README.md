@@ -63,3 +63,10 @@ Legacy validation remains available with:
     swift test --jobs 1
     python3 -m unittest discover -s Tests/BankStoreCLITests
     ./script/build_and_run.sh --package
+
+## Agent financial summary
+
+The BBVA plugin reports financial net worth and monthly net cash run rate.
+See [the financial metrics contract](skills/bank/references/financial-metrics.md)
+for repayment inclusion, balance reconciliation and the reviewed-input CLI.
+This plugin workflow is independent of the app ledger and its net-income view.

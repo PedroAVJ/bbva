@@ -1,7 +1,7 @@
 {
   "name": "bbva",
-  "version": "0.2.4",
-  "description": "Maintain the user's private BBVA records and native macOS spending view without placing personal data in the plugin package.",
+  "version": "0.2.5",
+  "description": "Report financial net worth and monthly net cash run rate using private BBVA records, including installment and family repayments.",
   "author": {
     "name": "PedroAVJ",
     "url": "https://github.com/PedroAVJ"
@@ -19,7 +19,7 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "BBVA",
-    "shortDescription": "Private BBVA records and spending view",
+    "shortDescription": "Financial net worth and net cash run rate",
     "longDescription": "Own the user's BBVA statements, transactions, balances, account meaning, bank-linked products, and derived spending records through a private local store. The distributable plugin contains only the guarded workflow, schema, tests, and native macOS app.",
     "developerName": "PedroAVJ",
     "category": "Finance",
@@ -29,8 +29,8 @@
       "Write"
     ],
     "defaultPrompt": [
-      "Inspect my private BBVA records",
-      "Import BBVA documents into the private store",
+      "Show my financial net worth and monthly net cash run rate",
+      "Reconcile my balances and cash commitments",
       "Verify the local BBVA store"
     ],
     "brandColor": "#072146",
