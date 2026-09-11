@@ -11,15 +11,19 @@ Keep personal bank data out of that repository and out of other corpora. The
 private store defaults to
 `~/Library/Application Support/com.pedroavj.bbva/PrivateStore`.
 
-## Default financial summary
+## Financial workflows
 
-For net worth, net run rate, monthly cash surplus/shortfall, or a general personal
-financial summary, read [the financial metrics contract](references/financial-metrics.md).
-Report **financial net worth** and **monthly net cash run rate** by those names.
-Cash run rate includes card installments, parents/family repayments and tax/loan
-principal payments. Never silently replace it with accrual income, depreciation,
-net-worth change or the number of paychecks received. Use balances to constrain
-missing-statement estimates, and count each obligation once.
+- [Financial net worth](../net-worth/SKILL.md): financial assets minus all
+  outstanding debt at a timestamp; no expense review is required.
+- [Net cash run rate](../net-cash-run-rate/SKILL.md): normalized monthly
+  take-home income minus bills, debt payments, reserves and variable spending;
+  no balance-sheet refresh is required.
+
+Use both only when the request calls for both. For either workflow, resume from
+`records/financial-summary/review-index.json` when present; follow its dated
+evidence and correction pointers rather than an older superseded summary.
+The shared [financial metrics contract](references/financial-metrics.md) defines
+reconciliation rules and the reviewed-input calculator.
 
 ## Read and verify
 

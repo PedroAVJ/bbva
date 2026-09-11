@@ -7,7 +7,9 @@ from pathlib import Path
 import sys
 
 FACTORS = {'weekly': Decimal(52) / 12, 'biweekly': Decimal(26) / 12,
-           'monthly': Decimal(1), 'yearly': Decimal(1) / 12}
+           'four_weekly': Decimal(13) / 12, 'monthly': Decimal(1),
+           'yearly': Decimal(1) / 12}
+METRICS = ('both', 'net-worth', 'net-cash-run-rate')
 ASSETS = {'bank', 'cash', 'receivable'}
 DEBTS = {'card_total', 'loan', 'family', 'tax', 'other_debt'}
 EXPENSES = {'spending', 'subscription', 'installment', 'interest',
@@ -30,10 +32,15 @@ def money(value):
     return str(value.quantize(Decimal('0.01')))
 
 
-def calculate(data):
+def calculate(data, metric='both'):
+    if metric not in METRICS:
+        raise ValueError(f'unsupported metric: {metric}')
     if data.get('schema_version') != 1:
         raise ValueError('schema_version must be 1')
-    for field in ('as_of', 'period', 'currency'):
+    required = ['as_of', 'currency']
+    if metric != 'net-worth':
+        required.append('period')
+    for field in required:
         if not isinstance(data.get(field), str) or not data[field].strip():
             raise ValueError(f'{field} is required')
     if not isinstance(data.get('assumptions'), list) or not all(
@@ -56,39 +63,52 @@ def calculate(data):
                 estimated.append(row['id'])
             yield row, amount(row.get('amount'))
 
-    assets = sum((v for _, v in entries('assets', ASSETS)), Decimal(0))
-    debts = sum((v for _, v in entries('debts', DEBTS)), Decimal(0))
-    totals = {}
-    lines = []
-    for key, categories in [('income', {'cash_income'}), ('outgoings', EXPENSES)]:
-        total = Decimal(0)
-        for row, value in entries(key, categories):
-            frequency = row.get('frequency')
-            if frequency not in FACTORS:
-                raise ValueError(f'unsupported frequency: {frequency}')
-            monthly = value * FACTORS[frequency]
-            total += monthly
-            lines.append({'id': row['id'], 'kind': key, 'monthly_amount': money(monthly),
-                          'status': row['status'], 'source': row['source']})
-        totals[key] = total
+    result = {'schema_version': 1, 'metric': metric, 'as_of': data['as_of'],
+              'currency': data['currency']}
+    if metric != 'net-cash-run-rate':
+        assets = sum((v for _, v in entries('assets', ASSETS)), Decimal(0))
+        debts = sum((v for _, v in entries('debts', DEBTS)), Decimal(0))
+        result.update(financial_assets=money(assets), financial_debts=money(debts),
+                      financial_net_worth=money(assets - debts))
+    if metric != 'net-worth':
+        totals, lines = {}, []
+        for key, categories in [('income', {'cash_income'}), ('outgoings', EXPENSES)]:
+            total = Decimal(0)
+            for row, value in entries(key, categories):
+                frequency = row.get('frequency')
+                if frequency not in FACTORS:
+                    raise ValueError(f'unsupported frequency: {frequency}')
+                monthly = value * FACTORS[frequency]
+                total += monthly
+                line = {'id': row['id'], 'kind': key, 'category': row['category'],
+                        'monthly_amount': money(monthly), 'status': row['status'],
+                        'source': row['source']}
+                if row.get('label'):
+                    line['label'] = row['label']
+                lines.append(line)
+            totals[key] = total
+        result.update(period=data['period'], monthly_cash_income=money(totals['income']),
+                      monthly_cash_outgoings=money(totals['outgoings']),
+                      monthly_net_cash_run_rate=money(totals['income'] - totals['outgoings']),
+                      monthly_components=lines,
+                      ranked_monthly_outgoings=sorted(
+                          (line for line in lines if line['kind'] == 'outgoings'),
+                          key=lambda line: Decimal(line['monthly_amount']), reverse=True))
     if estimated and not data['assumptions']:
         raise ValueError('estimated entries require disclosed assumptions')
-    return {'schema_version': 1, 'as_of': data['as_of'], 'period': data['period'],
-            'currency': data['currency'], 'financial_net_worth': money(assets - debts),
-            'monthly_cash_income': money(totals['income']),
-            'monthly_cash_outgoings': money(totals['outgoings']),
-            'monthly_net_cash_run_rate': money(totals['income'] - totals['outgoings']),
-            'estimated_entries': estimated, 'assumptions': data['assumptions'],
-            'monthly_components': lines}
+    result.update(estimated_entries=estimated, assumptions=data['assumptions'])
+    return result
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--input', required=True, type=Path,
                         help='reviewed JSON record; keep personal inputs in the private store')
+    parser.add_argument('--metric', choices=METRICS, default='both',
+                        help='calculate one metric without requiring the other metric inputs')
     args = parser.parse_args()
     try:
-        result = calculate(json.loads(args.input.read_text()))
+        result = calculate(json.loads(args.input.read_text()), args.metric)
     except (OSError, ValueError, KeyError, TypeError, AttributeError) as error:
         print(f'financial-summary: {error}', file=sys.stderr)
         return 2

@@ -66,7 +66,10 @@ Legacy validation remains available with:
 
 ## Agent financial summary
 
-The BBVA plugin reports financial net worth and monthly net cash run rate.
-See [the financial metrics contract](skills/bank/references/financial-metrics.md)
+The BBVA plugin offers separate [financial net worth](skills/net-worth/SKILL.md)
+and [net cash run rate](skills/net-cash-run-rate/SKILL.md) skills. Either can run
+independently, with private review pointers preserving the latest methodology,
+item-level estimates and corrections for the next iteration. See
+[the financial metrics contract](skills/bank/references/financial-metrics.md)
 for repayment inclusion, balance reconciliation and the reviewed-input CLI.
 This plugin workflow is independent of the app ledger and its net-income view.

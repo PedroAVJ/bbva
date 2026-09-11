@@ -1,0 +1,4 @@
+interface:
+  display_name: "Financial net worth"
+  short_description: "Review financial assets minus outstanding debts"
+  default_prompt: "Use $net-worth to review my financial net worth from the latest private BBVA records."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Net cash run rate"
+  short_description: "Review normalized monthly cash surplus or deficit"
+  default_prompt: "Use $net-cash-run-rate to compare my monthly income and expense run rates, including variable spending and debt payments."

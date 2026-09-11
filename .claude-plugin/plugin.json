@@ -1,7 +1,7 @@
 {
   "name": "bbva",
-  "version": "0.2.5",
-  "description": "Report financial net worth and monthly net cash run rate using private BBVA records, including installment and family repayments.",
+  "version": "0.2.6",
+  "description": "Review financial net worth and monthly net cash run rate independently, with private records preserving item-level estimates and corrections.",
   "author": {
     "name": "PedroAVJ",
     "url": "https://github.com/PedroAVJ"
